@@ -1,0 +1,47 @@
+#calculator{
+	/* position: absolute; */
+	/* top: 20%; */
+	text-align: center;
+	margin: auto;
+	margin-top:5rem;
+	border: 2px solid white;
+	height:63vh;
+	width: 20rem;
+	background-color: lightgrey;
+	font-size: 1.8rem;
+}
+
+@media screen and (max-width:540px){
+	#calculator{
+		width: 20rem;
+	}
+}
+
+#display{
+	color: blue;
+	text-align: right;
+	font-size: 2.6rem;
+	height: 23%;
+	/*background-color: grey; */
+}
+
+.red{
+	background-color: #bf3434;
+}
+
+.white{
+	background-color: white;
+}
+
+.fontwhite{
+	color: white;
+}
+
+tr td{
+	width: 25%;
+	text-align: center;
+}
+
+.bold{
+	font-weight: bold;
+}

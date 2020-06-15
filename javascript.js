@@ -3,15 +3,21 @@ var display=document.getElementById("display");
 var operand1=0;
 var operand2=null;
 var operator=null;
+
+
 for (let i = 0; i < buttons.length; i++) {
+    
     buttons[i].addEventListener('click', function(){
+        
         var value=this.getAttribute("data-value");
+        
         if (value=='AC') {
             display.innerText="";
             operand1=0;
             operand2=null;
             operator=null;
         }
+        
         else if(value=='sign'){
             if(display.innerText.charAt(0)=='-'){
                 display.innerText=display.innerText.substr(1);
@@ -21,12 +27,14 @@ for (let i = 0; i < buttons.length; i++) {
             }
 
         }
+        
         else if(value=='+'||value=='-'||value=='*'||value=='/'||value=='%'){
             if(display.innerText.charAt(0)!='+'&&!display.innerText.charAt(0)!='-'&&display.innerText.charAt(0)!='*'&&display.innerText.charAt(0)!='%'&&display.innerText.charAt(0)!='/')
                 operand1=parseFloat(display.innerText);
             display.innerText=value;
             operator=value;
         }
+        
         else if(value=='='){
 
             // if(display.innerText.charAt(innerText.length()-1)=='%')
@@ -80,6 +88,13 @@ for (let i = 0; i < buttons.length; i++) {
             operand1=ans;
             operand2=null;
             operator=null;
+        }
+
+        else if(value=='.'){
+            console.log(".");
+            if(!display.innerText.includes(".")){
+                display.innerText+=value;
+            }
         }
         else{
             
